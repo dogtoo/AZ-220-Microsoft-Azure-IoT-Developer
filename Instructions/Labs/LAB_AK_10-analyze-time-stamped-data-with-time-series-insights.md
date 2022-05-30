@@ -79,16 +79,42 @@ To ensure these resources are available, complete the following steps.
 
 1. If validation passes, click **Create**.
 
-    The deployment will start.
+    The deployment will start. It will take several minutes to deploy the required Azure resources.
+
+1. While the Azure resources are being created, open a text editor tool (Notepad is accessible from the **Start** menu, under **Windows Accessories**). 
+
+    > **NOTE**: You will be using the text editor to store some configuration values associated with your Azure resources.
+
+1. In your text editor, enter the following text labels:
+
+    - connectionString-iothub:
+
+    - deviceID-truck:
+
+    - connectionString-truck:
+
+    - deviceID-airplane:
+
+    - connectionString-airplane:
+
+    - deviceID-container:
+
+    - connectionString-container:
+
+1. Switch back to the Azure portal window and wait for the deployment to finish.
+
+    You will see a notification when deployment is complete.
+
+    > **NOTE**: If the deployment fails during the createDevice operation, you will find steps listed below to create the devices manually.
 
 1. Once the deployment has completed, in the left navigation area, to review any output values from the template,  click **Outputs**.
 
     Make a note of the outputs for use later:
 
-    * connectionString (IoT Hub connection string) 
-    * deviceIDs (device connection strings)
+    * connectionString
+    * deviceIDs
 
-    > **Important**: The deviceIDs output contains a JSON array with the connection strings for each device. Use the text editor of your choice to extract the connection strings for the truck, airplane, and container devices:
+    > **Note**: The deviceIDs output contains a JSON array with the connection strings for each device. Use the text editor of your choice to record the device names and connection strings:
 
     ```json
     [
@@ -107,7 +133,49 @@ To ensure these resources are available, complete the following steps.
     ]
     ```
 
-The resources have now been created.
+    > **IMPORTANT**: If the deployment failed during the createDevice operation, the **Outputs** pane will be blank. Complete the following steps to create the required IoT devices and a record of the IoT hub and device connections strings.
+
+    1. On the Azure portal menu, click **Dashboard**.
+
+    1. On the **All resources** tile, to open your IoT hub, click **iot-az220-training-{your-id}**.
+
+    1. On the IoT hub blade, under **Device management**, click **Devices**.
+
+    1. On the Devices page, click **+ Add Device**.
+
+    1. On the Create a device page, under **Device ID**, enter **sensor-th-truck0001**
+
+        +++sensor-th-truck0001+++
+
+    1. At the bottom of the page, click **Save**.
+
+    1. Repeat the previous three steps to create IoT devices with Device IDs of **sensor-th-airplane0001** and **sensor-th-container0001**.
+
+        +++sensor-th-airplane0001+++
+
+        +++sensor-th-container0001+++
+
+    1. On the Devices page, under **Device ID**, click **sensor-th-truck0001**.
+
+        If the device isn't listed, on the Devices page, click **Refresh**.
+
+    1. On the sensor-th-truck0001 page, to the right of the **Device ID** value, click **Copy**, and then save the value to your text editor file.
+
+    1. On the sensor-th-truck0001 page, copy the **Primary Connection String** value, and then save it to your text editor file.
+
+    1. Repeat the previous three steps to record the Device IDs and Primary Connection String values for the **sensor-th-airplane0001** and **sensor-th-container0001** devices.
+
+    1. Navigate back to your IoT hub blade.
+
+    1. On the left side menu, under **Security settings**, click **Shared access policies**.
+
+    1. Click **iothubowner**.
+
+    1. Notice that the IoT hub Primary Connection String is listed.
+
+    1. Copy the value of the IoT hub Primary Connection String and save it to your text editor file.
+
+    The Azure resources required for this lab are now available.
 
 ### Exercise 2: Setup Time Series Insights
 
