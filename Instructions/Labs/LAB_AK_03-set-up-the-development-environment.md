@@ -279,11 +279,7 @@ You will be using Docker Desktop Community (latest stable version) during a lab 
 
     You can use Windows Settings to open the Windows Features dialog, and use that to verify that Hyper-V and Containers are enabled.
 
-1. Click **Download from Docker Hub**
-
-1. Under Docker Desktop for Windows, click **Get Docker Desktop for Windows (stable)**.
-
-1. To start the installation, click **Run**.
+1. Click **Docker Desktop for Windows**, and then follow the on-screen instructions to open and run the downloaded installation file.
 
     It can take a little while for the installation dialog for Docker Desktop to appear.
 

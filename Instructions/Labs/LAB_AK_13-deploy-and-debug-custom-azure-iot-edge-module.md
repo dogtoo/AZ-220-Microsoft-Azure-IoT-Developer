@@ -171,7 +171,7 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
 
     To provide a globally unique name, enter +++acraz220training{your-id}+++.
 
-    For example: **acraz220trainingcah191204**
+    For example: **acraz220trainingcah220531**
 
     The name of your Azure Container Registry must be globally unique because it is a publicly accessible resource that you must be able to access from any IP connected device.
 
@@ -207,7 +207,7 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
 
 1. Under **Admin user**, click **Enable**.
 
-    This option will enable you to Docker login to the Azure Container Registry service using the registry name as the username and admin user access key as the password.
+    This option will enable you to login to the Azure Container Registry service using the registry name as the username and admin user access key as the password.
 
 1. Make a record of the following values:
 
